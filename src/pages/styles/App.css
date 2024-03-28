@@ -21,7 +21,7 @@
   border: none;
   outline: none;
   text-align: center;
-  box-shadow: #121212 0 0 0 1.6px, transparent 0 0 0 0;
+  box-shadow: #121212 0 0 0 1.2px, transparent 0 0 0 0;
 }
 .verInput:focus{
   border: none;
