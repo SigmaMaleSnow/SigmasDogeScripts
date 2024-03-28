@@ -1,0 +1,121 @@
+
+  
+  .footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .privacy-policy {
+    background-color: transparent;
+    background: floralwhite;
+    color: #000; /* Black text color */
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .privacy-policy a {
+    color: #000;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .privacy-policy a:hover{
+    text-decoration: underline;
+
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    margin: auto;
+    color: #fff;
+    padding: 10px 20px;
+    width: 80%;
+    margin-top: 50px;
+  }
+  .logo:first-child {
+    margin: 0;
+    padding: 0;
+    font-size: 27px;
+    font-weight: 700;
+  }
+  .logo:last-child{
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 14.7px;
+    text-decoration: none;
+  }
+  .logo h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 27px;
+    color: #000000;
+    font-weight: 500;
+  }
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .navbar li {
+    margin-right: 20px;
+  }
+  .navbar a{
+    text-decoration: none;
+    color: black;
+  }
+  .navbar a:hover {
+    text-decoration:underline dotted;
+  }
+  .custom-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    margin-top: 100%;
+  }
+  
+  .custom-footer h3 {
+    color: #fff;
+  }
+  
+  .custom-footer p,
+  .custom-footer ul {
+    color: #ccc;
+  }
+  
+  .custom-footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .custom-footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .footer-col {
+    width: 50%;
+  }
+  .custom-footer a{
+    color: white;
+  }
+  .custom-footer a:hover{
+    text-decoration: none;
+  }

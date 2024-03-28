@@ -1,0 +1,78 @@
+*{
+  font-family: monospace;
+  font-weight: 400;
+}
+
+.App {
+ text-align: center;
+ margin: auto;
+ margin-top: 240px;
+
+}
+.Bold{
+  font-weight: 600;
+
+}
+.verInput{
+  width: 400px;
+  height: 70px;
+  border-radius: 10px;
+  font-size: x-large;
+  border: none;
+  outline: none;
+  text-align: center;
+  box-shadow: #121212 0 0 0 1.6px, transparent 0 0 0 0;
+}
+.verInput:focus{
+  border: none;
+  outline: none;
+}
+.verBtn{
+  width: 407px;
+  height: 80px;
+  align-items: center;
+  background-color: #000000;
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin-top: 10px;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+@keyframes ellipsis {
+  0% {
+    content: "...";
+  }
+  25% {
+    content: "..";
+  }
+  50% {
+    content: ".";
+  }
+  75% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+  }
+}
+
+#loadingText::after {
+  content: "...";
+  animation: ellipsis 1s infinite;
+}

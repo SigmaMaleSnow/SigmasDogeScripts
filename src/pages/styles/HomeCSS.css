@@ -1,0 +1,40 @@
+.home{
+    padding: 30px;
+    margin: auto;
+    text-align: center;
+}
+.t hr{
+    width: 600px;
+}
+.contentdivider hr{
+ width: 70%;
+}
+.inlineDisplay{
+    display: inline;
+    padding: 15px;
+}
+.longCard img{
+    border-radius: 9px;
+}
+.longCard{
+    width: 80%;
+    margin: auto;
+}
+
+.longCard div{
+    display: contents;
+}
+.longCard a{
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+.longCard a:hover{
+    text-decoration: underline dotted;
+}
+.Bold{
+    font-weight: 700;
+}
+.AllCaps{
+    text-transform: uppercase;
+}
