@@ -31,19 +31,19 @@ const Home = () => {
         <br />
         <div className='longCard'>
           <div className='FloatL'><img src='https://th.bing.com/th/id/R.bc8abf4164cb9ae12872dd77956f3753?rik=Gl3gxHAwUT%2bJ7g&pid=ImgRaw&r=0' width={60} height={60} alt='placeholder' /></div>
-          <h1 className='inlineDisplay'><a href='#'>Lorem ipsum dolor sit amet, consectetur</a></h1>
+          <h1 className='inlineDisplay'><a href='/'>Lorem ipsum dolor sit amet, consectetur</a></h1>
           <p className='inlineDisplay'>elit. Vestibulum sed est vitae libero ultricies fermentum in id nisi.</p>
         </div>
         <br />
         <div className='longCard'>
           <div className='FloatL'><img src='https://th.bing.com/th/id/R.bc8abf4164cb9ae12872dd77956f3753?rik=Gl3gxHAwUT%2bJ7g&pid=ImgRaw&r=0' width={60} height={60} alt='placeholder' /></div>
-          <h1 className='inlineDisplay'><a href='#'>Lorem dolor sit</a></h1>
+          <h1 className='inlineDisplay'><a href='/'>Lorem dolor sit</a></h1>
           <p className='inlineDisplay'>elit. Vestibulum sed est vitae libero.</p>
         </div>
         <br />
         <div className='longCard'>
           <div className='FloatL'><img src='https://th.bing.com/th/id/R.bc8abf4164cb9ae12872dd77956f3753?rik=Gl3gxHAwUT%2bJ7g&pid=ImgRaw&r=0' width={60} height={60} alt='placeholder' /></div>
-          <h1 className='inlineDisplay'><a href='#'>Lorem amet, consectetur</a></h1>
+          <h1 className='inlineDisplay'><a href='/'>Lorem amet, consectetur</a></h1>
           <p className='inlineDisplay'>elit. Vitae libero ultricies fermentum in id nisi.</p>
         </div>
         <br />

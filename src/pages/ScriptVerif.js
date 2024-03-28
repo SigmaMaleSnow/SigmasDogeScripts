@@ -8,7 +8,7 @@ const CountdownWithVerification = () => {
   const [randomCode, setRandomCode] = useState('');
   const [inputValue, setInputValue] = useState('');
   const [showVerifyBtn, setShowVerifyBtn] = useState(false);
-  const [timerText, setTimerText] = useState(`👋<b class="Bold">${script.toLocaleUpperCase()}</b> <span id="loadingText">Generating</span><br> <span style="font-size: 19px;">Join The Discord <a href="#discord">https://discord.gg/comingSoon</a></span> <br><span style="font-size: 19px"><b class="Bold">${script}</b> Will Open Soon</span>`);
+  const [timerText, setTimerText] = useState(`👋<b class="Bold">${script.toLocaleUpperCase()}</b> <span id="loadingText">Generating</span><br> <span style="font-size: 19px;">Join The Discord <a href="/">https://discord.gg/comingSoon</a></span> <br><span style="font-size: 19px"><b class="Bold">${script}</b> Will Open Soon</span>`);
 
   useEffect(() => {
     const timer = setInterval(() => {
