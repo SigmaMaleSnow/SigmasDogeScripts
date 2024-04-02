@@ -1,7 +1,6 @@
 import React from 'react';
+import './styles/Radata.css'
 import Cards from '../components/policy';
-import './styles/Radata.css';
-import JSONViewer from 'react-json-view';
 
 const Json = () => {
   // Sample JSON data
@@ -26,7 +25,7 @@ const Json = () => {
       "Who was the first person to fly solo across the Pacific ocean?",
       "Who was the first human to fly?"
     ]
-  };
+  }
   const LastJson = {
     main: "",
     desc: "",
@@ -37,22 +36,34 @@ const Json = () => {
       "Who was 3rd President of USA?",
       "Who became the third President and vice president?"
     ]
-  };
+  }
+
+  // Convert JSON objects to formatted JSON strings
+  const jsonString = JSON.stringify(jsonData, null, 2);
+  const MoreJsonString = JSON.stringify(MoreJson, null, 2);
+  const LastJSON = JSON.stringify(LastJson, null, 2);
 
   return (
     <div>
-      <div className="Json" style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#fff00', padding: '20px' }}>
-        <div className="JsonContent" style={{ maxWidth: '80%', overflowX: 'auto', textAlign: 'left' }}>
-          <h1>Example API Response</h1>
-          <JSONViewer src={jsonData} />
-          <JSONViewer src={MoreJson} />
-          <JSONViewer src={LastJson} />
+    <div className="Json" style={{ display: 'flex', justifyContent: 'center' }}>
+        <br/>
+      <div className="JsonContent" style={{ maxWidth: '80%', overflowX: 'auto', textAlign: 'left' }}>
+        <h1>Example API Response</h1>
+        <div>
+          <pre className="JsonBlock" >{jsonString}</pre>
+        </div>
+        <br />
+        <div>
+          <pre className="JsonBlock" >{MoreJsonString}</pre>
+        </div>
+        <br />
+        <div>
+          <pre className="JsonBlock" >{LastJSON}</pre>
         </div>
       </div>
-      <div style={{ textAlign: 'center', marginTop: '20px' }}>
-        <h1>Next Steps:</h1>
-        <Cards />
-      </div>
+    </div>
+    <h1 style={{ textAlign: 'center'}}>Next Steps:</h1>
+      <Cards/>
     </div>
   );
 };
