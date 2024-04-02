@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
-import { Controlled as CodeMirror } from 'react-codemirror2';
-import 'codemirror/lib/codemirror.css';
-import 'codemirror/theme/eclipse.css'; // Light theme
+import './styles/HomeCSS.css';
 
 const ReqURl = () => {
   const [code] = useState(`
 // Fetch data using fetch
-fetch('https://biggemoppify.pythonanywhere.com/search?q={param}')
-  .then(response => response.json())
+fetch('https://api.example.com/data')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));
 
 // Fetch data using Axios
-axios.get('https://biggemoppify.pythonanywhere.com/search?q={param}')
+axios.get('https://api.example.com/data')
   .then(response => console.log(response.data))
   .catch(error => console.error('Error:', error));
 `);
@@ -40,21 +43,24 @@ axios.get('https://biggemoppify.pythonanywhere.com/search?q={param}')
           <button className='button' onClick={copyToClipboard}>Copy</button>
         </div>
       </section>
-      <br/>
       <div className="codeEditorContainer">
         <h1 style={{ textAlign: 'center' }}>How Can I Use This?</h1>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <CodeMirror
+          <textarea
             value={code}
-            options={{
-              mode: 'javascript',
-              theme: 'eclipse', // Light theme
-              lineNumbers: true,
-              readOnly: true, // Make the editor read-only
-              lineWrapping: true, // Enable line wrapping
-              cursorBlinkRate: -1, // Disable cursor blinking
-              viewportMargin: Infinity, // Make editor fill entire container
-              scrollbarStyle: null, // Hide scrollbars
+            readOnly
+            style={{
+              width: '100%',
+              height: '360px',
+              fontFamily: 'monospace',
+              fontSize: '14px',
+              padding: '10px',
+              boxSizing: 'border-box',
+              resize: 'none',
+              outline: 'none',
+              border: 'none',
+              overflow: 'hidden',
+              borderRadius: '10px'
             }}
           />
         </div>
