@@ -21,11 +21,15 @@
   border: none;
   outline: none;
   text-align: center;
+<<<<<<< HEAD
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: all 0.1s;
 }
 .verInput:hover{
   transform: scale(1.03);
+=======
+  box-shadow: #121212 0 0 0 1.2px, transparent 0 0 0 0;
+>>>>>>> 56c43e659b17b1708ff6be69ac5eabf8e234afa6
 }
 .verInput:focus{
   border: none;
