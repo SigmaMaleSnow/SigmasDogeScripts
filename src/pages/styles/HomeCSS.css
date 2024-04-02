@@ -1,40 +1,136 @@
 .home{
-    padding: 30px;
-    margin: auto;
-    text-align: center;
+padding: 30px;
+margin: auto;
+text-align: center;
 }
 .t hr{
-    width: 600px;
+width: 600px;
 }
 .contentdivider hr{
- width: 70%;
+width: 70%;
 }
 .inlineDisplay{
-    display: inline;
-    padding: 15px;
+display: inline;
+padding: 15px;
 }
 .longCard img{
-    border-radius: 9px;
+border-radius: 9px;
 }
 .longCard{
-    width: 80%;
-    margin: auto;
+width: 80%;
+margin: auto;
 }
 
 .longCard div{
-    display: contents;
+display: contents;
 }
 .longCard a{
-    color: black;
-    text-decoration: none;
-    font-weight: 600;
+color: black;
+text-decoration: none;
+font-weight: 600;
 }
 .longCard a:hover{
-    text-decoration: underline dotted;
+text-decoration: underline dotted;
 }
 .Bold{
-    font-weight: 700;
+font-weight: 700;
 }
 .AllCaps{
-    text-transform: uppercase;
+text-transform: uppercase;
+}
+.containerWthis {
+max-width: 600px;
+margin: 50px auto;
+padding: 20px;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inputtext[type="text"] {
+width: calc(100% - 80px);
+padding: 10px;
+border-radius: 4px 0 0 4px;
+border: 1px solid #ccc;
+font-size: 16px;
+box-sizing: border-box;
+height: 60px;
+outline: none;
+border: none;
+}
+
+.button {
+width: 80px;
+padding: 10px;
+border-radius: 0 4px 4px 0;
+border: none;
+background-color: #007bff;
+color: #fff;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+box-sizing: border-box;
+height: 60px;
+font-weight: 900;
+}
+
+.button:hover {
+background-color: #006ee4;
+}
+.result{
+text-align: left;
+
+}
+.less{
+    width: 600px;
+    font-size: 35px;
+    font-weight: 550;
+}
+.resultImage{
+width: 100%;
+object-fit: cover;
+height: 160px;
+margin-top: 50px;
+
+}
+
+.skeleton-loading {
+display: inline-block;
+background-color: #f0f0f0;
+margin-top: 50px;
+border-radius: 10px;
+float: left;
+border-radius: 4px;
+animation: loading 1s ease-in-out infinite alternate;
+}
+
+@keyframes loading {
+0% {
+    opacity: 0.5;
+}
+100% {
+    opacity: 1;
+}
+}
+.displaythsi{
+    background-color: #fff;
+    height: 400px;
+}
+.buttonrel{
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.06);
+    font-size: 22px;
+    width: 100%;
+    height: 100px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.09s;
+}
+.buttonrel:hover{
+    transform: scale(1.025);
+}
+.cols{
+    position: static;
+    height: 50px;
 }

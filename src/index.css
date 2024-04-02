@@ -30,3 +30,8 @@ body::-webkit-scrollbar-thumb {
   border: none;
   outline: none;
 }
+.Privacy{
+  padding: 100px;
+  margin: 50px;
+  margin-top: -50px;
+}

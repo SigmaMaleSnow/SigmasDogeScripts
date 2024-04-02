@@ -15,19 +15,25 @@
 }
 .verInput{
   width: 400px;
-  height: 70px;
+  height: 80px;
   border-radius: 10px;
   font-size: x-large;
   border: none;
   outline: none;
   text-align: center;
-  box-shadow: #121212 0 0 0 1.6px, transparent 0 0 0 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s;
+}
+.verInput:hover{
+  transform: scale(1.03);
 }
 .verInput:focus{
   border: none;
   outline: none;
+  transform: scale(1);
 }
 .verBtn{
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 407px;
   height: 80px;
   align-items: center;
@@ -53,6 +59,10 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  transition: all 0.2;
+}
+.verBtn:hover{
+  transform: scale(1.04);
 }
 @keyframes ellipsis {
   0% {

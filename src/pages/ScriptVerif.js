@@ -75,6 +75,7 @@ const CountdownWithVerification = () => {
           <button className='verBtn' onClick={handleVerifyClick}>Open "{script}"</button>
         </div>
       )}
+      <div style={{height: '250px'}}></div>
     </div>
   );
 };
