@@ -132,14 +132,25 @@ return (
   </div>
 </section>
 <h1>Pricing?</h1>
+<div className='priceHolder'>
 <div className='pricing'>
-<h2>$0.00</h2>
-<sub><b className='Bold'>Free</b></sub>
-<hr style={{ backgroundColor: 'black'}}/>
-<p><strong className='Bold'>Unlimited</strong> Requests</p>
-<p>No <strong className='Bold'>Hidden</strong> Fees</p>
-<p>No <strong className='Bold'>Information</strong> Required</p>
-<p>Access To <strong className='Bold'>Premium</strong> Features</p>
+  <h1><b className='Bold'>$0.00</b></h1>
+  <br/>
+  <p><strong className='Bold'>100%</strong> Free</p>
+  <p><strong className='Bold'>Unlimited</strong> requests</p>
+  <p>No <strong className='Bold'>hidden</strong> fees</p>
+  <p>No <strong className='Bold'>information</strong> required</p>
+  <p>Access to <strong className='Bold'>premium</strong> features</p>
+</div>
+<div className='pricing'>
+<div className="skeleton-loading" style={{ width: '90%', height: '90px', marginTop: '10px',float: 'left' }}></div>
+  <br/>
+  <div className="skeleton-loading" style={{ width: '80%', height: '20px', marginTop: '30px',float: 'left' }}></div>
+  <div className="skeleton-loading" style={{ width: '75%', height: '20px', marginTop: '10px',float: 'left' }}></div>
+  <div className="skeleton-loading" style={{ width: '70%', height: '20px', marginTop: '10px',float: 'left' }}></div>
+  <div className="skeleton-loading" style={{ width: '65%', height: '20px', marginTop: '10px',float: 'left' }}></div>
+  <div className="skeleton-loading" style={{ width: '60%', height: '20px', marginTop: '10px',float: 'left' }}></div>
+</div>
 </div>
 <br/>
 <h1>Start Today:</h1>

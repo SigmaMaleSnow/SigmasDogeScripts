@@ -103,10 +103,6 @@ return (
     </div>
     <div className="footer-row">
       <div className="footer-col">
-        <h2>Cookies And Privacy</h2>
-      <ul>
-          <li><a href='/json'>Privacy Policy</a></li>
-        </ul>
       </div>
     </div>
   </div>

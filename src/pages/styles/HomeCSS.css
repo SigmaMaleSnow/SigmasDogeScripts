@@ -134,3 +134,27 @@ animation: loading 1s ease-in-out infinite alternate;
     position: static;
     height: 50px;
 }
+.pricing{
+    background: white;
+    width: 350px;
+    height: 500px;
+    margin: auto;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.06);
+    color: black;
+  }
+  .pricing h2{
+    font-size: 30px;
+  }
+  .pricing:hover{
+    transform: scale(1.01);
+  }
+.priceHolder{
+display: flex;
+margin: auto;
+width: 850px;
+}
