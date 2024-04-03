@@ -1,6 +1,5 @@
 import React from 'react';
 import './styles/Radata.css'
-import Cards from '../components/policy';
 
 const Json = () => {
   // Sample JSON data
