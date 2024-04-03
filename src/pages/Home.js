@@ -131,6 +131,20 @@ return (
   <p className='result'><b className='Bold'>Please</b> be aware that this API is still under development, and as a result, it may not provide valid responses at this time. We are actively working to resolve these issues and improve its functionality. </p>
   </div>
 </section>
+<h1>Pricing?</h1>
+<div className='pricing'>
+<h2>$0.00</h2>
+<sub><b className='Bold'>Free</b></sub>
+<hr style={{ backgroundColor: 'black'}}/>
+<p><strong className='Bold'>Unlimited</strong> Requests</p>
+<p>No <strong className='Bold'>Hidden</strong> Fees</p>
+<p>No <strong className='Bold'>Information</strong> Required</p>
+<p>Access To <strong className='Bold'>Premium</strong> Features</p>
+</div>
+<br/>
+<h1>Start Today:</h1>
+
+<br/>
 <Cards/>
 </div>
 );

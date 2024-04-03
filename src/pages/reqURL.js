@@ -4,7 +4,7 @@ import './styles/HomeCSS.css';
 const ReqURl = () => {
   const [code] = useState(`
 // Fetch data using fetch
-fetch('https://api.example.com/data')
+fetch('https://biggemoppify.pythonanywhere.com/search?q={param}')
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
@@ -15,7 +15,7 @@ fetch('https://api.example.com/data')
   .catch(error => console.error('Error:', error));
 
 // Fetch data using Axios
-axios.get('https://api.example.com/data')
+axios.get('https://biggemoppify.pythonanywhere.com/search?q={param}')
   .then(response => console.log(response.data))
   .catch(error => console.error('Error:', error));
 `);
