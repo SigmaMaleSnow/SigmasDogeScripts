@@ -9,6 +9,7 @@ import ConsentBanner from './components/cookie'
 import Json from './pages/RawJson';
 import ReqURl from './pages/reqURL';
 import About from './pages/About';
+import Promo from './pages/Promo';
 const App = () => {
 const [remainingTime, setRemainingTime] = useState('');
 const targetDate = moment('2024-6-29');
@@ -46,13 +47,13 @@ return (
 <div className="navbar">
 <div>
 <li className="logo"><a href="/">Dogescripts</a></li>
-<li className="logo"><a href="/">History/Facts API</a></li>
+<li className="logo"><a href="/">👋History API</a></li>
 </div>
 <ul>
-<li><a href="/">API</a></li>
+<li><a href="/">Home</a></li>
 <li><a href="/about">About</a></li>
-<li><a href="/requrl">Url</a></li>
-<li><a href='/json'>Json</a></li>
+<li><a href="/requrl">Request</a></li>
+<li><a href='/json'>Example</a></li>
 </ul>
 </div>
 <div className="container">
@@ -70,6 +71,7 @@ return (
   <Route path='/json' element={<Json/>} />
   <Route path='/requrl' element={<ReqURl/>} />
   <Route path='/about' element={<About/>} />
+  <Route path='/games/promo-page' element={<Promo/>} />
 </Routes>
 </div>
 <div style={{ width: '100%', height: '200px'}}></div>
@@ -79,26 +81,6 @@ return (
       <div className="footer-col">
         <h3>About This API</h3>
         <p>Explore history effortlessly with our user-friendly free history/facts API. Unlock a wealth of knowledge and dive into the past with ease. Perfect for students, researchers, and history enthusiasts alike. Start exploring today and discover the wonders of our shared heritage!</p>
-      </div>
-      <div className="footer-col">
-        <h3>Contact Us</h3>
-        <ul>
-          <li><a style={{ textDecoration: 'none'}} href='/'>opsonlose@gmail.com</a></li>
-        </ul>
-        <h3>Pages</h3>
-        <ul>
-          <li><a href='/'>Home</a></li>
-        </ul>
-        <ul>
-          <li><a href='/about'>About</a></li>
-        </ul>
-        <ul>
-          <li><a href='/requrl'>URL</a></li>
-        </ul>
-        <ul>
-          <li><a href='/json'>JSON Example</a></li>
-        </ul>
-        
       </div>
     </div>
     <div className="footer-row">
