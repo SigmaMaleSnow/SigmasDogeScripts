@@ -51,8 +51,8 @@ return (
 <ul>
 <li><a href="/">API</a></li>
 <li><a href="/about">About</a></li>
-<li><a href="/requrl">Request URL</a></li>
-<li><a href='/json'>JSON Example</a></li>
+<li><a href="/requrl">Url</a></li>
+<li><a href='/json'>Json</a></li>
 </ul>
 </div>
 <div className="container">
@@ -93,7 +93,7 @@ return (
           <li><a href='/about'>About</a></li>
         </ul>
         <ul>
-          <li><a href='/requrl'>Request URL</a></li>
+          <li><a href='/requrl'>URL</a></li>
         </ul>
         <ul>
           <li><a href='/json'>JSON Example</a></li>

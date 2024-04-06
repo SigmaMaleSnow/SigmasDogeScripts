@@ -12,10 +12,6 @@ const AdSenseBanner = () => {
     setShowAds(hasConsent);
   }, []);
 
-  const handleLearnMore = () => {
-    window.open('privacy-policy', '_blank');
-  };
-
   return (
     <div className="ad-container">
       {showAds && (
@@ -55,20 +51,8 @@ const AdSenseBanner = () => {
         onAccept={() => setShowAds(true)}
       >
         <p>
-        <strong>👋Hey there!</strong> We use cookies to make your experience awesome. Enjoy personalized content and ads just for you!
+        <strong>👋Hey there!</strong> We use cookies to make your experience awesome. Enjoy personalized content and ads just for you!<a style={{color:'white'}} href='/privacy-policy'>Learn More</a>
         </p>
-        <button
-          className="learn-more-button"
-          onClick={handleLearnMore}
-          onMouseEnter={(e) => {
-            e.target.style.transform = 'scale(1.02)';
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.transform = 'scale(1)';
-          }}
-        >
-          Privacy Policy
-        </button>
       </CookieConsent>
     </div>
   );

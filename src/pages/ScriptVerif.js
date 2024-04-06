@@ -1,14 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import './styles/App.css';
+import Cards from '../components/policy';
+import Confetti from 'react-dom-confetti';
 
 const CountdownWithVerification = () => {
   const urlParams = new URLSearchParams(window.location.search);
   let script = urlParams.get('script');
-  const [seconds, setSeconds] = useState(8);
+  const [seconds, setSeconds] = useState(13);
   const [randomCode, setRandomCode] = useState('');
   const [inputValue, setInputValue] = useState('');
+  const [isRunning, setIsRunning] = useState(false);
   const [showVerifyBtn, setShowVerifyBtn] = useState(false);
-  const [timerText, setTimerText] = useState(`👋<b class="Bold">${script.toLocaleUpperCase()}</b> <span id="loadingText">Generating</span><br> <span style="font-size: 19px;">Join The Discord <a href="/">https://discord.gg/comingSoon</a></span> <br><span style="font-size: 19px"><b class="Bold">${script}</b> Will Open Soon</span>`);
+  const [timerText, setTimerText] = useState(`👋<b class="Bold">
+  ${script.toLocaleUpperCase()}</b> 
+  <span id="loadingText">Generating</span>
+  <br> <span style="font-size: 19px;">Thank You For Installing Our ${script} Script Want <a style="text-decoration: none;" href="/">More?</a></span>
+  <br><span style="font-size: 19px"><b class="Bold">${script}</b> 
+  Will Open Soon</span>
+  `);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -32,10 +41,13 @@ const CountdownWithVerification = () => {
       code += characters[randomIndex];
     }
     setRandomCode(code);
-    setTimerText(`Script Code: <b class="Bold">${code}</b>`);
+    setTimerText(`Script Code: <b id="code" style="user-select: none;" class="iconsBtns Bold">${code}</b>`);
     setShowVerifyBtn(true);
   };
-
+  const HandleCopy = () => {
+    alert("Copied: " + randomCode)
+    navigator.clipboard.writeText(randomCode)
+  }
   const handleInputChange = event => {
     setInputValue(event.target.value);
   };
@@ -51,17 +63,64 @@ const CountdownWithVerification = () => {
   const randomEnd = End[randomEndIndex];
   const handleVerifyClick = () => {
     if (inputValue === randomCode) {
-      window.location.href = `https://${script}/?key=${randomStart}${randomCode}${randomEnd}`
+      setTimerText(`${randomCode} <b class="Bold">Verified!</b> Redirecting...`)
+      setIsRunning(true)
+      setTimeout(function(){
+      window.open(`https://${script}/?key=${randomStart}${randomCode}${randomEnd}`, '_blank');
+      },3000)
     } else {
       alert('Incorrect code');
     }
   };
-
+  const config = {
+    angle: 180,
+    spread: 360,
+    startVelocity: 40,
+    elementCount: 70,
+    dragFriction: 0.12,
+    duration: 5000, // Change the duration here for slower confetti
+    stagger: 3,
+    width: '10px',
+    height: '10px',
+    perspective: '1000px',
+    colors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a'],
+  };
   return (
     <div className='App'>
-      <h1 id='timer' dangerouslySetInnerHTML={{ __html: timerText }}></h1>
+  <div style={{ display: 'flex', justifyContent: 'center'}}>
+      <div style={{ flex: 1 }}>
+        <Confetti active={isRunning} config={config} />
+      </div>
+      <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
+        <Confetti active={isRunning} config={config} />
+      </div>
+    </div>
+    <img style={{margin: 'auto', borderRadius: '50%'}} width={100} height={100} alt='SetScript' src='https://emoji.gg/assets/emoji/2625_krunker_logo.png'></img>
+    <div style={{height: '18px'}}></div>
+    <></>
+      <h1 id='timer' style={{display: 'inline' }} dangerouslySetInnerHTML={{ __html: timerText }}></h1>
       {seconds === 0 && randomCode && (
+      <button className='iconsBtns'  onClick={HandleCopy} style={{ background: 'transparent', outline: 'none', border: 'none', width: '20px', height: '20px', transition: 'all 0.03s'}}><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 4h-4a2 2 0 00-2-2H10a2 2 0 00-2 2H4a2 2 0 00-2 2v14a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2z" />
+  <rect x="8" y="10" width="12" height="12" rx="1" ry="1" />
+</svg>
+
+</button>
+      )}
+      {seconds === 0 && randomCode && (
+        
         <div>
+          
           <br />
           <input className='verInput' placeholder='Enter Code...'  type="text" value={inputValue} onChange={handleInputChange} />
           <br />
@@ -75,6 +134,9 @@ const CountdownWithVerification = () => {
           <button className='verBtn' onClick={handleVerifyClick}>Open "{script}"</button>
         </div>
       )}
+      <div style={{height: '200px'}}></div>
+      <h1>Support Us</h1>
+      <Cards/>
       <div style={{height: '250px'}}></div>
     </div>
   );
