@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './styles/App.css';
-import Cards from '../components/policy';
 import Confetti from 'react-dom-confetti';
 
 const CountdownWithVerification = () => {
@@ -18,7 +17,11 @@ const CountdownWithVerification = () => {
   <br><span style="font-size: 19px"><b class="Bold">${script}</b> 
   Will Open Soon</span>
   `);
+  const [isButtonVisible, setIsButtonVisible] = useState(true);
 
+  const handleClick = () => {
+    setIsButtonVisible(false);
+  };
   useEffect(() => {
     const timer = setInterval(() => {
       setSeconds(prevSeconds => (prevSeconds > 0 ? prevSeconds - 1 : prevSeconds));
@@ -75,10 +78,10 @@ const CountdownWithVerification = () => {
   const config = {
     angle: 180,
     spread: 360,
-    startVelocity: 40,
-    elementCount: 70,
-    dragFriction: 0.12,
-    duration: 5000, // Change the duration here for slower confetti
+    startVelocity: 90,
+    elementCount: 80,
+    dragFriction: 0.1,
+    duration: 9000, // Change the duration here for slower confetti
     stagger: 3,
     width: '10px',
     height: '10px',
@@ -86,18 +89,9 @@ const CountdownWithVerification = () => {
     colors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a'],
   };
   return (
-    <div className='App'>
-  <div style={{ display: 'flex', justifyContent: 'center'}}>
-      <div style={{ flex: 1 }}>
-        <Confetti active={isRunning} config={config} />
-      </div>
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
-        <Confetti active={isRunning} config={config} />
-      </div>
-    </div>
-    <img style={{margin: 'auto', borderRadius: '50%'}} width={100} height={100} alt='SetScript' src='https://emoji.gg/assets/emoji/2625_krunker_logo.png'></img>
+    <div  style={{ overflow:'hidden' }} className='App'>
+<Confetti active={isRunning} config={config} />
     <div style={{height: '18px'}}></div>
-    <></>
       <h1 id='timer' style={{display: 'inline' }} dangerouslySetInnerHTML={{ __html: timerText }}></h1>
       {seconds === 0 && randomCode && (
       <button className='iconsBtns'  onClick={HandleCopy} style={{ background: 'transparent', outline: 'none', border: 'none', width: '20px', height: '20px', transition: 'all 0.03s'}}><svg
@@ -134,9 +128,15 @@ const CountdownWithVerification = () => {
           <button className='verBtn' onClick={handleVerifyClick}>Open "{script}"</button>
         </div>
       )}
+       {isButtonVisible && (
+        <div className='Options'>
+          <h2><b className='Bold'>{script}</b> Script</h2>
+          <button onClick={handleClick}>👎🏻</button>
+          <button onClick={handleClick}>👍🏼</button>
+        </div>
+       )}
+
       <div style={{height: '200px'}}></div>
-      <h1>Support Us</h1>
-      <Cards/>
       <div style={{height: '250px'}}></div>
     </div>
   );

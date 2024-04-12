@@ -1,5 +1,4 @@
 *{
-  font-family: monospace;
   font-weight: 400;
 }
 
@@ -15,14 +14,14 @@
 }
 .verInput{
   width: 400px;
-  height: 80px;
+  height: 90px;
   border-radius: 10px;
-  font-size: x-large;
   border: none;
   outline: none;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: all 0.1s;
+  font-size: 22px;
 }
 .verInput:hover{
   transform: scale(1.03);
@@ -35,7 +34,7 @@
 .verBtn{
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 407px;
-  height: 80px;
+  height: 85px;
   align-items: center;
   background-color: #000000;
   border-radius: 12px;
@@ -60,6 +59,7 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   transition: all 0.2;
+  font-size: smaller;
 }
 .verBtn:hover{
   transform: scale(1.04);
@@ -88,4 +88,37 @@
 }
 .iconsBtns:hover{
   transform: scale(1.1);
+}
+.Options button{
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 50px;
+  font-size: xx-large;
+  width: 50px;
+}
+.Options button:hover{
+transform: scale(1.03);
+}
+.Options{
+  margin-top: 90px !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 290px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  height: 150px;
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  animation: move 1.3s ease-in-out forwards;
+  
+}
+@keyframes move {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
