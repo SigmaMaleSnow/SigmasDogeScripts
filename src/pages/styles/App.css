@@ -93,12 +93,10 @@
   background: transparent;
   border: none;
   outline: none;
-  height: 50px;
-  font-size: xx-large;
-  width: 50px;
+  font-size: xxx-large;
 }
 .Options button:hover{
-transform: scale(1.03);
+transform: scale(1.09);
 }
 .Options{
   margin-top: 90px !important;
@@ -107,12 +105,17 @@ transform: scale(1.03);
   background-color: white;
   padding: 10px;
   border-radius: 10px;
-  height: 150px;
+
   position: fixed;
   left: 10px;
   bottom: 10px;
   animation: move 1.3s ease-in-out forwards;
+  z-index: 9999;
   
+}
+.Options img{
+  position: relative;
+  left: -10px;
 }
 @keyframes move {
   from {

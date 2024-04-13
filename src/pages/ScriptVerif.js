@@ -88,6 +88,7 @@ const CountdownWithVerification = () => {
     perspective: '1000px',
     colors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a'],
   };
+  const pfp = `https://www.google.com/s2/favicons?sz=64&domain=${script}`
   return (
     <div  style={{ overflow:'hidden' }} className='App'>
 <Confetti active={isRunning} config={config} />
@@ -130,9 +131,11 @@ const CountdownWithVerification = () => {
       )}
        {isButtonVisible && (
         <div className='Options'>
-          <h2><b className='Bold'>{script}</b> Script</h2>
-          <button onClick={handleClick}>👎🏻</button>
-          <button onClick={handleClick}>👍🏼</button>
+          <section style={{ marginTop: '-10px' }}>
+          <h2><img style={{ borderRadius: '8px'}} width={50} height={50} src={pfp} alt='Domain Icon' ></img><strong style={{ fontWeight: '600' }}>{script.toUpperCase()}</strong></h2>
+          <button onClick={handleClick}>👎</button>
+          <button onClick={handleClick}>👍</button>
+          </section>
         </div>
        )}
 
