@@ -15,7 +15,7 @@ const Promo = () => {
         <div className='skeleton-loading' style={{ width: '100%', borderRadius: '10px', height: '250px', margin: '0'}}></div>
           <h2>Deadshot.io ESP</h2>
           <p>Adding a red fill to show all players through walls makes the game clearer and helps players strategize better.</p>
-          <p><b className='Bold'>Unlisted Script</b></p>
+          <p><b className='Bold'>*Patched</b></p>
         </a>
         <a href='https://greasyfork.org/en/scripts/491124-krunker-io-aimbot-xray-spinbot-wireframe-fov-box-and-3rd-person-by-dogeware' rel="noreferrer" target="_blank" className="large-card">
         <div className='skeleton-loading' style={{ width: '100%', borderRadius: '10px', height: '250px', margin: '0'}}></div>

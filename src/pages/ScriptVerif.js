@@ -5,20 +5,28 @@ import Confetti from 'react-dom-confetti';
 const CountdownWithVerification = () => {
   const urlParams = new URLSearchParams(window.location.search);
   let script = urlParams.get('script');
-  const [seconds, setSeconds] = useState(13);
+  const [seconds, setSeconds] = useState(24);
   const [randomCode, setRandomCode] = useState('');
   const [inputValue, setInputValue] = useState('');
   const [isRunning, setIsRunning] = useState(false);
   const [showVerifyBtn, setShowVerifyBtn] = useState(false);
-  const [timerText, setTimerText] = useState(`👋<b class="Bold">
-  ${script.toLocaleUpperCase()}</b> 
-  <span id="loadingText">Generating</span>
-  <br> <span style="font-size: 19px;">Thank You For Installing Our ${script} Script Want <a style="text-decoration: none;" href="/">More?</a></span>
-  <br><span style="font-size: 19px"><b class="Bold">${script}</b> 
-  Will Open Soon</span>
+  const [timerText, setTimerText] = useState(`
+  <b style="font-size: 36px">👋<b class="Bold">${script.toLocaleUpperCase()}</b> <span id="loadingText">Generating</span></b>
+  <br> <span style="font-size: 21px;">Thank You For Installing Our ${script} Script Want <a style="text-decoration: none;" href="/">More?</a></span>
+  <br><span style="font-size: 21px"><b class="Bold">${script}</b> Coming Soon!</span>
+  <br>
+  <iframe
+  id="DinoGame"
+  src="https://chrome-trex.github.io/Normal-Mode/"
+  title="Chrome Dino Game"
+  width="800"
+  height="300"
+  frameBorder="0"
+></iframe>
+  <br>
+
   `);
   const [isButtonVisible, setIsButtonVisible] = useState(true);
-
   const handleClick = () => {
     setIsButtonVisible(false);
   };
@@ -133,8 +141,8 @@ const CountdownWithVerification = () => {
         <div className='Options'>
           <section style={{ marginTop: '-10px' }}>
           <h2><img style={{ borderRadius: '8px'}} width={50} height={50} src={pfp} alt='Domain Icon' ></img><strong style={{ fontWeight: '600' }}>{script.toUpperCase()}</strong></h2>
-          <button onClick={handleClick}>👎</button>
-          <button onClick={handleClick}>👍</button>
+          <button onClick={handleClick}>&#x1F44E;</button>
+          <button onClick={handleClick}>&#x1F44D;</button>
           </section>
         </div>
        )}
