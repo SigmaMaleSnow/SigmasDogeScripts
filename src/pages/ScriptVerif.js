@@ -137,8 +137,7 @@ const CountdownWithVerification = () => {
           </section>
         </div>
        )}
-
-      <div style={{height: '200px'}}></div>
+      <div style={{height: '150px'}}></div>
       <div style={{height: '250px'}}></div>
     </div>
   );

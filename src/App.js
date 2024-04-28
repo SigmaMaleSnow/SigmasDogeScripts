@@ -10,10 +10,10 @@ import Json from './pages/RawJson';
 import ReqURl from './pages/reqURL';
 import About from './pages/About';
 import Promo from './pages/Promo';
+import { AdBlockDetectedWrapper } from "adblock-detect-react";
 const App = () => {
 const [remainingTime, setRemainingTime] = useState('');
 const targetDate = moment('2024-6-29');
-
 useEffect(() => {
 const interval = setInterval(() => {
   const now = moment();
@@ -29,6 +29,10 @@ const interval = setInterval(() => {
 return () => clearInterval(interval);
 
 }, [targetDate]);
+const [showMessage, setShowMessage] = useState(true);
+const handleCloseMessage = () => {
+  setShowMessage(false);
+};
 useEffect(() => {
   const link = document.createElement('link');
   link.rel = 'icon';
@@ -37,12 +41,24 @@ useEffect(() => {
   return () => {
     document.head.removeChild(link);
   };
-}, []);
+  
+}, [showMessage]);
 document.title = `DogeScripts: ${remainingTime}`;
 
 return (
 <BrowserRouter>
 <ConsentBanner/>
+{showMessage && (
+        <AdBlockDetectedWrapper>
+          <div className='anti_adblock'>
+          <h1>AD BLOCKER😱</h1>
+          <p>
+          🫷Your ad blocker will not disable ads on this site. Please close it before proceeding further.😦
+          </p>
+            <button className='closeButton' onClick={handleCloseMessage}>Close</button>
+          </div>
+        </AdBlockDetectedWrapper>
+      )}
 <div className="app">
 <div className="navbar">
 <div>
@@ -64,6 +80,7 @@ return (
 </footer>
 
 </div>
+<div className={showMessage ? 'blocked-content' : ''}>
 <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/games" element={<CountdownWithVerification />} />
@@ -73,6 +90,7 @@ return (
   <Route path='/about' element={<About/>} />
   <Route path='/games/promo-page' element={<Promo/>} />
 </Routes>
+</div>
 </div>
 <div style={{ width: '100%', height: '200px'}}></div>
 <footer className="custom-footer">
