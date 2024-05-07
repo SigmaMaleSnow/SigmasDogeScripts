@@ -1,9 +1,8 @@
 *{
   font-family: monospace !important;
-  letter-spacing: 0.3px;
 }
 body {
-  margin: 0;
+  
   font-family: monospace !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

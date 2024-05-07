@@ -5,12 +5,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CountdownWithVerification from './pages/ScriptVerif';
 import Home  from './pages/Home';
 import Privacy from './pages/Privacy';
-import ConsentBanner from './components/cookie'
 import Json from './pages/RawJson';
 import ReqURl from './pages/reqURL';
 import About from './pages/About';
 import Promo from './pages/Promo';
 import { AdBlockDetectedWrapper } from "adblock-detect-react";
+import Key from './pages/Key';
 const App = () => {
 const [remainingTime, setRemainingTime] = useState('');
 const targetDate = moment('2024-6-29');
@@ -47,7 +47,6 @@ document.title = `DogeScripts: ${remainingTime}`;
 
 return (
 <BrowserRouter>
-<ConsentBanner/>
 {showMessage && (
         <AdBlockDetectedWrapper>
           <div className='anti_adblock'>
@@ -89,6 +88,7 @@ return (
   <Route path='/requrl' element={<ReqURl/>} />
   <Route path='/about' element={<About/>} />
   <Route path='/games/promo-page' element={<Promo/>} />
+  <Route path='/script/key-unlock' element={<Key/>} />
 </Routes>
 </div>
 </div>

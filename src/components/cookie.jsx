@@ -50,7 +50,7 @@ const AdSenseBanner = () => {
         onAccept={() => setShowAds(true)}
       >
         <p>
-        <strong>👋Hey there!</strong> We use cookies to make your experience awesome. Enjoy personalized content and ads just for you!<a style={{color:'white', textDecoration:'none'}} href='/privacy-policy'>Learn More</a>
+        <strong>👋Hey there!</strong> We use cookies to make your experience awesome. Enjoy personalized content and ads just for you!
         </p>
       </CookieConsent>
     </div>

@@ -15,6 +15,7 @@
     background: floralwhite;
     color: #000; /* Black text color */
     padding: 10px 20px;
+  font-size: 17px;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
