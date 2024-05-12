@@ -50,11 +50,9 @@ return (
 {showMessage && (
         <AdBlockDetectedWrapper>
           <div className='anti_adblock'>
-          <h1>AD BLOCKER😱</h1>
-          <p>
-          🫷Your ad blocker will not disable ads on this site. Please close it before proceeding further.😦
-          </p>
-            <button className='closeButton' onClick={handleCloseMessage}>Close</button>
+          <h1>AD BLOCKER</h1>
+          <p><b className="Bold">Vital Reminder!</b> We've identified that your <b className="Bold">ad blocker</b> is currently enabled. Our website depends on <b className="Bold">advertisements</b> to maintain its <b className="Bold">free content</b> and services. By <b className="Bold">disabling</b> your ad blocker, you directly support our platform's ability to provide <b className="Bold">valuable resources</b> to our visitors. We appreciate your cooperation in ensuring a sustainable and enriching browsing experience for all. Thank you for your understanding and <b className="Bold">generosity</b>!</p>
+            <button className='closeButton' onClick={handleCloseMessage}>❌</button>
           </div>
         </AdBlockDetectedWrapper>
       )}
