@@ -161,9 +161,7 @@
   .closeButton:hover {
     transform: scale(1.1);
   }
-  .blocked-content {
-    pointer-events: none; /* Disable pointer events for the content while popup is visible */
-  }
+
   .popup-overlay {
     position: fixed;
     top: 0;
