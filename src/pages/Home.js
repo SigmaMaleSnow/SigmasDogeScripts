@@ -1,5 +1,5 @@
 import './styles/HomeCSS.css';
-import React, { Fragment, useState, useEffect } from 'react';
+import React from 'react';
 
 const Home = () => {
 return (
