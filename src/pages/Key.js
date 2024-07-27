@@ -1,17 +1,6 @@
 import React from 'react';
 import './styles/keyunlock.css'
 import './styles/HomeCSS.css';
-function generateRandomString() {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  let randomString = '';
-  for (let i = 0; i < 56; i++) {
-      randomString += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
-  
-  randomString += 'DONT_SHARE_WITH_ANYONE';
-  
-  return randomString;
-}
 const Key = () => {
   
   const urlParams = new URLSearchParams(window.location.search);
