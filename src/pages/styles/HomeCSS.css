@@ -156,7 +156,8 @@ animation: loading 1s ease-in-out infinite alternate;
 .priceHolder{
 display: flex;
 margin: auto;
-width: 850px;
+width: fit-content;
+gap: 46px;
 }
 .script{
     display: flex;
@@ -181,4 +182,138 @@ width: 850px;
 .script a:hover{
     text-decoration: none;
     transform: scale(1.04);
+}
+.coloredname{
+    font-size: 3rem;
+    font-weight: 1000;
+    background: linear-gradient(45deg, #FF6B6B, #ff3d3d, #fd9a9a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.card4script{
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 600px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.06);
+    margin: auto;
+    text-align: left;
+    margin-top: 10px;
+    transition: all 0.1s;
+
+}
+.card4script:hover{
+    transform: scale(1.009);
+}
+.card4script h2{
+    font-size: 26px;
+    text-align: left;
+    font-weight: bold;
+}
+.learnmorecard{
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 600px;
+    height: 500px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.06);
+    margin: auto;
+    margin-top: 10px;
+}
+.geomatery{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    position: relative;
+    z-index: -1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);;
+}
+.pointMakingh{
+    font-size: 40px;
+    font-weight: bold;
+}
+.learnmorecard *{
+    transition: all 0.1s;
+}
+.learnmorecard section{
+    margin-top: 25%;
+}
+.rating-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 290px;
+    margin-top: 35px;
+    text-align: center;
+    max-width: 350px;
+    transition: transform 0.3s;
+    min-height: 250px;
+}
+
+.rating-card:hover {
+    transform: scale(1.02);
+}
+
+/* Title styling */
+.rating-card h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333333;
+    font-weight: bold;
+}
+
+/* Star container styling */
+.stars {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+/* Individual star styling */
+.star {
+    width: 35px;
+    height: 35px;
+    background: #ffd700;
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+    );
+    margin: 0 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.star:hover {
+    transform: scale(1.2);
+    background: #ff6347;
+}
+
+/* Paragraph styling */
+.rating-card p {
+    font-size: 1.1em;
+    color: #666666;
+    margin-top: -17px;
+    line-height: 1.4;
+    padding: 20px; 
+}
+.icons8-trust { display: inline-block; width: 100px; height: 100px; background: url('https://img.icons8.com/?size=512&id=hmjf7ms7Hb1h&format=png') 50% 50% no-repeat; background-size: 100%; }
+.icons8-stats { display: inline-block; width: 100px; height: 100px; background: url('https://img.icons8.com/?size=512&id=15&format=png') 50% 50% no-repeat; background-size: 100%; }
+.icons8-about { display: inline-block; width: 140px; height: 140px; background: url('https://img.icons8.com/?size=512&id=80eweJGFK1F4&format=png') 50% 50% no-repeat; background-size: 100%; }
+.bgicon1 {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background-size: 100%;
+    position: absolute;
+    z-index: -1 !important;
+    margin-left: 200px;
+    transform: rotate(45deg);
 }

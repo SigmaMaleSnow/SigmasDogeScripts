@@ -1,164 +1,61 @@
-import Cards from '../components/policy';
 import './styles/HomeCSS.css';
 import React, { Fragment, useState, useEffect } from 'react';
 
-const GetStartedArray = [
-  "Who is actually the first president?",
-  "Who originally made Discord?",
-  "World's oldest Dog?",
-  "What is the oldest cat alive right now?",
-  "What started World War 2?",
-  "Who invented a wheel?",
-  "When did Shaq and Kobe win their first championship?",
-  "Has anyone lived past 120?",
-  "How many Americans have diabetes?",
-  "Who is the first YouTuber?",
-  "Who was the first female Prime Minister of the United Kingdom?",
-  "What year did the Berlin Wall fall?",
-  "Who discovered penicillin?",
-  "What was the name of the first human to travel into space?",
-  "Who is known as the 'Father of the Computer'?",
-  "What was the Treaty of Versailles?",
-  "Who painted the Mona Lisa?",
-  "When was the Magna Carta signed?",
-  "Who wrote the novel '1984'?"
-]
 const Home = () => {
-const [searchResult, setSearchResult] = useState(null);
-const [isLoading, setIsLoading] = useState(false);
-const [shuffledArray, setShuffledArray] = useState([]);
-const handleSearch = async () => {
-const teamName = document.getElementById('teamInput').value;
-if (teamName.trim() !== '') {
-try {
-  setIsLoading(true);
-  const response = await fetch(`https://biggemoppify.pythonanywhere.com/search?q=${teamName}`);
-  if (!response.ok) {
-    throw new Error('Network response was not ok');
-  }
-  const responseData = await response.json();
-  setSearchResult(responseData);
-} catch (error) {
-  setSearchResult({ error: 'Error fetching data. Please try again later.' });
-} finally {
-  setIsLoading(false); 
-}
-} else {
-setSearchResult({ error: 'Please enter a Vaild Search.' });
-}
-};
-const HandleBtn = (a) => {
-  document.getElementById('teamInput').value = a
-  window.setTimeout(()=>handleSearch(),100)
-}
-useEffect(() => {
-  const shuffled = GetStartedArray.slice().sort(() => Math.random() - 0.5);
-  setShuffledArray(shuffled.slice(0, 4));
-}, []);
-
 return (
 <div className="home">
-<h1 className='Bold'>👋History/Facts API</h1>
-<p><b className='Bold'>Open</b> Source Request URL</p>
+<h1 className='normFont'>Use <b className='coloredname'>Javascript</b> With ❤️</h1>
+<p><b className='Bold'>Open</b> Source <b className='Bold'>Userscripts🤖</b> .IO Cheats, We <b className='Bold'>Provide</b>:</p>
 <section className='t'>
-  <div className="containerWthis">
-    <input id="teamInput" className='inputtext' type="text" placeholder="Try It Out? Enter History/Facts you Want to know about..." />
-    <button className='button' onClick={handleSearch}>Search</button>
-    <br/>
-    {isLoading ? (
-      <div className="displaythsi">
-        <div className="skeleton-loading" style={{ width: '70%', height: '50px', marginTop: '30px',float: 'left' }}></div>
-        <div className="skeleton-loading" style={{ width: '80%', height: '30px', marginTop: '10px',float: 'left' }}></div>
-        <div className="skeleton-loading" style={{ width: '90%', height: '20px', marginTop: '10px',float: 'left' }}></div>
-        <div className="skeleton-loading" style={{ width: '100%', height: '100px', marginTop: '20px',float: 'left' }}></div>
-        <div className="skeleton-loading" style={{ width: '100%', height: '100px', marginTop: '20px',float: 'left' }}></div>
-        <div className="skeleton-loading" style={{ width: '100%', height: '100px', marginTop: '20px',float: 'left' }}></div>
-        <div className="skeleton-loading" style={{ width: '100%', height: '100px', marginTop: '20px',float: 'left' }}></div>
-        <div style={{ width: '100%', height: '10px', marginTop: '10px',float: 'left' }}></div>
-
-      </div>
-    ) : (
-      searchResult ? (
-        <div className="searchResult">
-          {searchResult.error ? (
-             <div>
-             <br/>
-           <h2 className='result'>No Results😞:</h2>
-           <p className='result'>How about giving it another shot?</p>
-           {shuffledArray && shuffledArray.map((element, index) => (
-        <Fragment key={index}>
-          <br />
-          <button onClick={() => HandleBtn(element)} className='buttonrel'>{element}</button>
-          <br />
-        </Fragment>
-      ))}
-         </div>
-          ) : (
-            <Fragment>
-              <br/>
-              <h1 className="result Bold less">{searchResult.main}</h1>
-              <h2 className="result">{searchResult.desc}</h2>
-              <p className="result typing-animation">{searchResult.sub}</p>
-              <h2 className="result">Related History/Facts</h2>
-              {searchResult.rel && Array.isArray(searchResult.rel) && (
-                  searchResult.rel.map((element, index) => (
-                  <Fragment>
-                    <br/>
-                    <button onClick={() => HandleBtn(element)} className='buttonrel' key={index}>{element}</button>
-                    <br/>
-                 </Fragment>
-              ))
-            )}
-            </Fragment>
-          )}
-        </div>
-      ) : (
-        <div>
-      <br />
-      <h2 className='result'>Get Started:</h2>
-      <p className='result'>Come check out our API and see what it can do! Start exploring now for some amazing possibilities!</p>
-      {shuffledArray && shuffledArray.map((element, index) => (
-        <Fragment key={index}>
-          <br />
-          <button onClick={() => HandleBtn(element)} className='buttonrel'>{element}</button>
-          <br />
-        </Fragment>
-      ))}
-    </div>
-      )
-    )}
-    <br></br>
-  <p className='result'><b className='Bold'>Please</b> be aware that this API is still under development, and as a result, it may not provide valid responses at this time. We are actively working to resolve these issues and improve its functionality. </p>
+<div className='bgicon1'></div>
+  <div className='card4script'>
+    <h2>Krunker.Io</h2>
+    <p><b className='Bold'>Features:</b> Aimbot, ESP, Charms, Wireframe, Cam, & SpinBot</p>
   </div>
-</section>
-<h1>Pricing?</h1>
-<div className='priceHolder'>
-<div className='pricing'>
-  <h1><b className='Bold'>$0.00</b></h1>
-  <br/>
-  <p><strong className='Bold'>100%</strong> Free</p>
-  <p><strong className='Bold'>Unlimited</strong> requests</p>
-  <p>No <strong className='Bold'>hidden</strong> fees</p>
-  <p>No <strong className='Bold'>information</strong> required</p>
-  <p>Access to <strong className='Bold'>premium</strong> features</p>
-</div>
-<div className='pricing'>
-<div className="skeleton-loading" style={{ width: '90%', height: '90px', marginTop: '10px',float: 'left' }}></div>
-  <br/>
-  <div className="skeleton-loading" style={{ width: '80%', height: '20px', marginTop: '30px',float: 'left' }}></div>
-  <div className="skeleton-loading" style={{ width: '75%', height: '20px', marginTop: '10px',float: 'left' }}></div>
-  <div className="skeleton-loading" style={{ width: '70%', height: '20px', marginTop: '10px',float: 'left' }}></div>
-  <div className="skeleton-loading" style={{ width: '65%', height: '20px', marginTop: '10px',float: 'left' }}></div>
-  <div className="skeleton-loading" style={{ width: '60%', height: '20px', marginTop: '10px',float: 'left' }}></div>
-</div>
-</div>
+  <div id='scripts' className='card4script'>
+    <h2>Ev.Io</h2>
+    <p><b className='Bold'>Features:</b> Aimbot, ESP, & Wireframe</p>
+    
+  </div>
+  <div className='card4script'>
+    <h2>SmashKarts.Io</h2>
+    <p><b className='Bold'>Features:</b> ESP, & Charms</p>
+  </div>
+  <div className='card4script'>
+    <h2>Voxiom.Io</h2>
+    <p><b className='Bold'>Features:</b> ESP, Charms, & Wireframe</p>
+  </div>
+  </section>
+  <div className='learnmorecard'>
+    <div className='icons8-trust'></div>
+    <h1 style={{position: 'relative', top: '-30px'}} className='normFont'><b className='Bold'>Development:</b></h1>
+    <p style={{position: 'relative', top: '-30px', color: 'gray', width:'80%', textAlign: 'center', margin: 'auto' }}>Sed id consectetur arcu.
+
+Praesent auctor, erat eget finibus vestibulum, ipsum dui efficitur sapien, a gravida tortor metus et nunc. Nulla at nisi ullamcorper, laoreet ante ac, volutpat risus. Integer quis felis ac nisi sodales cursus vel ac ligula. Aliquam erat volutpat. Sed eget metus in dui mattis dapibus. Proin sed mauris ac ante tristique rutrum. Phasellus vitae nunc lectus. Nunc vel tincidunt lorem. Etiam id sapien vitae erat lacinia lacinia. Sed id massa ut nisi rutrum maximus eget vitae felis. Integer at diam in eros posuere dapibus. Phasellus porta orci eu dolor consectetur, ut bibendum libero venenatis. Vivamus et elit vitae velit fermentum laoreet sit amet ac ipsum.</p>
+    <div className='geomatery' style={{  width:'190px', height:'190px', top: '-450px', left: '-130px', background: 'radial-gradient(circle at 30% 30%, #EE82EE, #8000FF)'}}></div>
+    <div className='geomatery' style={{  width:'210px', height:'210px', top: '-200px', left: '500px', background: 'radial-gradient(circle at 30% 30%, #00FF00, #00B200)'}}></div>
+  </div>
+  <div id='about' className='learnmorecard'>
+  <div className='icons8-about'></div>
+    <h1 style={{position: 'relative', top: '-40px'}} className='normFont'><b className='Bold'>About Us:</b></h1>
+    <p style={{position: 'relative', top: '-40px', color: 'gray', width:'80%', textAlign: 'center', margin: 'auto' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at tortor nec nisi facilisis scelerisque. Mauris vitae risus libero. Nullam commodo massa sit amet tellus ultricies, sit amet sollicitudin arcu dictum. Proin sed tellus ut risus laoreet gravida. Nullam non libero euismod, consectetur libero id, feugiat ipsum. Vivamus non neque in ante pretium ultrices. Morbi lobortis augue id ligula fermentum, eu aliquet est cursus. Integer auctor fermentum magna, vel suscipit risus dignissim id. Phasellus pretium lorem eget lacus aliquet, eget vestibulum neque molestie.</p>
+  </div>
+  <div className='learnmorecard'>
+    <section>
+    <h2><b className='pointMakingh'>25k+</b> Users</h2>
+    <h3><b className='pointMakingh'>632+</b> Daily</h3>
+    </section>
+    <div className='geomatery' style={{ width: '190px', height: '190px', top: '-400px', left: '-100px', borderRadius: '50%', background: 'radial-gradient(circle at 30% 30%, #FF6B6B, #ff3d3d, #f9ffc2)'}}></div>
+<div className='geomatery' style={{ width: '200px', height: '200px', top: '-80px', left: '-50px', borderRadius: '50%', background: 'radial-gradient(circle at 30% 30%, #ff6600, #ff9933, #ffdd77)'}}></div>
+<div className='geomatery' style={{ width: '220px', height: '220px', top: '-530px', left: '500px', borderRadius: '50%', background: 'radial-gradient(circle at 30% 30%, #FFFF00, #FFD700, #FFA500)'}}></div>
+
+  </div>
+  
 <br/>
-<h1>Start Today:</h1>
 
 <br/>
-<Cards/>
 </div>
 );
-};
+}
 
 export default Home;

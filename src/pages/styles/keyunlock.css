@@ -50,6 +50,7 @@
 .icons8-discord { display: inline-block; width: 50px; height: 50px; background: url('https://img.icons8.com/?size=512&id=25627&format=png') 50% 50% no-repeat; background-size: 100%; }
 .icons8-review { display: inline-block; width: 50px; height: 50px; background: url('https://img.icons8.com/?size=512&id=37927&format=png') 50% 50% no-repeat; background-size: 100%; }
 .icons8-github { display: inline-block; width: 50px; height: 50px; background: url('https://img.icons8.com/?size=512&id=106562&format=png') 50% 50% no-repeat; background-size: 100%; }
+
 .unlock-key button {
     display: flex;
     align-items: center;
@@ -76,4 +77,16 @@
 .headertext{
   text-align: center;
   font-size: 30px;
+}
+.errordiv{
+  background-color: rgba(255, 255, 255, 0);
+  padding: 15px;
+  border-radius: 10px;
+  width: 600px;
+  height: 500px;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  font-size: larger;
+  padding: 150px;
 }

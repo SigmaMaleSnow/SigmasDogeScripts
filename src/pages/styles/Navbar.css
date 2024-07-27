@@ -161,16 +161,3 @@
   .closeButton:hover {
     transform: scale(1.1);
   }
-  .blocked-content {
-    pointer-events: none; /* Disable pointer events for the content while popup is visible */
-  }
-  .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: 9999; /* Ensure the overlay is on top of everything */
-  }
-  

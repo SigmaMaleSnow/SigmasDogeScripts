@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles/keyunlock.css'
+import './styles/HomeCSS.css';
 function generateRandomString() {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let randomString = '';
@@ -11,11 +12,12 @@ function generateRandomString() {
   
   return randomString;
 }
-
 const Key = () => {
   
   const urlParams = new URLSearchParams(window.location.search);
   let script4key = urlParams.get('script4key');
+  const ref = 'https://'+ window.location.hostname + '/games/?script=' + script4key
+  /*
   let reviewscript = urlParams.get('reviewscript');
   console.log(reviewscript)
   let progress = 10
@@ -41,6 +43,7 @@ const Key = () => {
     console.log("Checked " + duration + " " + location + " " + progress);
   }
   return (
+    
     <div className="Unlock">
             <div style={{height: '40px'}}></div>
         <div className='unlock-key'>
@@ -68,5 +71,20 @@ const Key = () => {
         </div>
         <div style={{height: '100px'}}></div>
     </div>
+    
 )}
+*/
+return (
+  <div>
+  <div className='errordiv'>
+    <h1 className='Bold'>Not Available</h1>
+    <p>Premium AD Key Has Been Temporarily Removed</p>
+    <a href={ref}>Basic Key</a>
+    <div className='geomatery' style={{  width:'190px', height:'190px', top: '-220px', left: '430px', background: 'radial-gradient(circle at 30% 30%, #FF6B6B, #ff3d3d, #f9ffc2)'}}></div>
+    <div className='geomatery' style={{  width:'210px', height:'210px', top: '-280px', left: '-50px', background: 'radial-gradient(circle at 30% 30%, #ff6600, #ff9933, #ffdd77)'}}></div>
+  </div>
+  <div style={{ width: '900px'}}></div>
+  </div>
+)
+}
 export default Key
