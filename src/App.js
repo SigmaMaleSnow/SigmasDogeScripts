@@ -9,7 +9,7 @@ import Promo from './pages/Promo';
 import Key from './pages/Key';
 const App = () => {
 const [remainingTime, setRemainingTime] = useState('');
-const targetDate = moment('2026-6-29');
+const targetDate = moment('2026-5-29');
 useEffect(() => {
 const interval = setInterval(() => {
   const now = moment();
